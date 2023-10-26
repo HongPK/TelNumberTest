@@ -162,7 +162,7 @@ class Phone {                               //클래스 Phone 여기서 거의 �
             System.out.println();
         }
     }
-    void allDelete() throws SQLException {
+    void allDelete() throws SQLException {                                  //테이블 내 전체삭제 메소드 지저분해져서 넣었다..
         String sql="truncate table phone;";
         pstmt=conn.prepareStatement(sql);
         pstmt.executeUpdate();
@@ -172,7 +172,7 @@ public class TelNumber {
     public static void main(String[] args) throws SQLException, InterruptedException, UnsupportedEncodingException {
         Scanner sc = new Scanner(System.in);
         Phone phone = new Phone();
-        phone.allDelete();// 테이블내 전체 삭제문 정리가 안되서 넣었다.
+        //phone.allDelete();// 테이블내 전체 삭제문 정리가 안되서 넣었다.
         System.out.println("전화번호부 만들기 - 데이터베이스 연동");
         while (true){
             System.out.println("1.입력 2.검색 3.삭제 4.전체출력 5.종료");
