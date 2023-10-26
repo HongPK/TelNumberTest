@@ -98,6 +98,8 @@ class Phone {                               //클래스 Phone 여기서 거의 �
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+        System.out.println("입력 되었습니다.");
     }
     void serching() throws SQLException {
 
@@ -131,7 +133,7 @@ class Phone {                               //클래스 Phone 여기서 거의 �
 
     void del() throws SQLException {
         System.out.println("3.삭제");
-        System.out.println("이름 :");
+        System.out.print("이름 :");
         String name=sc.next();
 
         if(!nameCheck(name)){
@@ -173,7 +175,7 @@ public class TelNumber {
         phone.allDelete();// 테이블내 전체 삭제문 정리가 안되서 넣었다.
         System.out.println("전화번호부 만들기 - 데이터베이스 연동");
         while (true){
-            System.out.println("1.입력 2.검색 3.삭제 4.출력 5.종료");
+            System.out.println("1.입력 2.검색 3.삭제 4.전체출력 5.종료");
             String choice = sc.nextLine();              // int로 받으면 글씨 입력시 에러를 발생하여 문자열로 받았다.
 
             if(choice.equals("1")){
